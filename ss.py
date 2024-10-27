@@ -77,11 +77,13 @@ fig2 = px.bar(
 fig2.update_layout(
     width=700, 
     height=500, 
-    plot_bgcolor='white',  
-    paper_bgcolor='white',
-    font=dict(color='black'),
+    plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    font=dict(color='grey'),  # Titles in grey
     xaxis_title='Gender',  
-    yaxis_title='Number of Job Postings'
+    yaxis_title='Number of Job Postings',
+    xaxis=dict(showline=True, linewidth=1, linecolor='grey'),  # Grey axis lines
+    yaxis=dict(showline=True, linewidth=1, linecolor='grey')   # Grey axis lines
 )
 
 # Show the bar chart in the Streamlit app
@@ -120,9 +122,11 @@ fig3 = px.bar(
 fig3.update_layout(
     width=700, 
     height=500, 
-    paper_bgcolor='white',
-    plot_bgcolor='white',
-    font=dict(color='black')
+    plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    font=dict(color='grey'),  # Titles in grey
+    xaxis=dict(showline=True, linewidth=1, linecolor='grey'),  # Grey axis lines
+    yaxis=dict(showline=True, linewidth=1, linecolor='grey')   # Grey axis lines
 )
 
 st.plotly_chart(fig3)
@@ -160,6 +164,8 @@ fig4 = px.pie(
 fig4.update_layout(
     width=800,
     height=500,
+    paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    font=dict(color='grey'),  # Titles in grey
     legend_title_text="Job Title"
 )
 
@@ -196,10 +202,11 @@ fig_median = px.bar(
 fig_median.update_layout(
     width=800,
     height=500,
-    paper_bgcolor='white',
-    plot_bgcolor='white',
-    font=dict(color='black'),
-    legend_title_text="Experience Level"
+    plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    font=dict(color='grey'),  # Titles in grey
+    xaxis=dict(showline=True, linewidth=1, linecolor='grey'),  # Grey axis lines
+    yaxis=dict(showline=True, linewidth=1, linecolor='grey')   # Grey axis lines
 )
 
 # Show the median salary chart
@@ -222,10 +229,11 @@ fig_mean = px.bar(
 fig_mean.update_layout(
     width=800,
     height=500,
-    paper_bgcolor='white',
-    plot_bgcolor='white',
-    font=dict(color='black'),
-    legend_title_text="Experience Level"
+    plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
+    font=dict(color='grey'),  # Titles in grey
+    xaxis=dict(showline=True, linewidth=1, linecolor='grey'),  # Grey axis lines
+    yaxis=dict(showline=True, linewidth=1, linecolor='grey')   # Grey axis lines
 )
 
 st.plotly_chart(fig_mean)
